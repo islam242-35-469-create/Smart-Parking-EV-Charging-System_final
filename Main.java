@@ -1,6 +1,6 @@
+import java.util.*;
 import manager.ParkingManager;
 import models.*;
-import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,10 +29,11 @@ public class Main {
                     System.out.print("Enter type (car/bike/ev): ");
                     String type = sc.nextLine();
 
-                    Vehicle v;
-                    if (type.equals("car")) v = new Car(number, owner);
-                    else if (type.equals("bike")) v = new Bike(number, owner);
-                    else v = new ElectricCar(number, owner);
+                    Vehicle v = switch (type) {
+                        case "car" -> new Car(number, owner);
+                        case "bike" -> new Bike(number, owner);
+                        default -> new ElectricCar(number, owner);
+                    };
 
                     manager.parkVehicle(v);
                 }
@@ -50,7 +51,10 @@ public class Main {
                     manager.parkVehicle(new ElectricCar("DHAKA-3003", "Nadia"));
                 }
 
-                case 5 -> System.exit(0);
+                case 5 -> {
+                    sc.close();
+                    System.exit(0);
+                }
             }
         }
     }
