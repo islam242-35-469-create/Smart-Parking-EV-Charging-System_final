@@ -1,0 +1,20 @@
+package models;
+
+public abstract class Vehicle {
+    private String number;
+    private String ownerName;
+    private long entryTime;
+
+    public Vehicle(String number, String ownerName) {
+        this.number = number;
+        this.ownerName = ownerName;
+        this.entryTime = System.currentTimeMillis();
+    }
+
+    public String getNumber() { return number; }
+    public String getOwnerName() { return ownerName; }
+    public long getEntryTime() { return entryTime; }
+
+    public abstract double calculateCharge(long minutes);
+    public abstract String getVehicleType();
+}
