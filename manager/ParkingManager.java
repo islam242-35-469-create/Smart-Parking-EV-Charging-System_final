@@ -1,15 +1,13 @@
 package manager;
 
-import models.*;
 import java.util.*;
+import models.*;
 
 public class ParkingManager {
-    private String name;
     private int slots;
     private List<Vehicle> list = new ArrayList<>();
 
     public ParkingManager(String name, int slots) {
-        this.name = name;
         this.slots = slots;
     }
 
