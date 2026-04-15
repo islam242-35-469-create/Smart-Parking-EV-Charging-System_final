@@ -48,6 +48,50 @@ It simulates a real-life parking management system where users can park vehicles
 * `calculateCharge()` method overridden in each subclass
 
 ---
+## Sample Output
+
+```
+===== SMART PARKING SYSTEM =====
+1. Park Vehicle
+2. Checkout Vehicle
+3. Show Parking Status
+4. Add Demo Vehicles
+5. Exit
+Choose option: 1
+
+Enter vehicle number: DHAKA-1234
+Enter owner name: Rahim
+Enter type (car/bike/ev): car
+Car parked.
+
+===== SMART PARKING SYSTEM =====
+Choose option: 3
+
+Total: 5 | Occupied: 1
+Car - DHAKA-1234
+
+===== SMART PARKING SYSTEM =====
+Choose option: 2
+
+Enter number: DHAKA-1234
+
+--- Checkout Details ---
+Vehicle Type : Car
+Number       : DHAKA-1234
+Owner        : Rahim
+Time         : 2 minute(s)
+Charge       : Tk 90.0
+
+Checkout completed.
+
+===== SMART PARKING SYSTEM =====
+Choose option: 5
+
+Program closed.
+```
+
+---
+
 
 ## Project Structure
 
